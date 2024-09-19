@@ -56,6 +56,7 @@ Large graphs, disconnected components, and self-loops are among the cases that t
 The technique can handle both tiny networks and bigger datasets with thousands of vertices because it is built to scale effectively. Memorization prevents unnecessary computations, ensuring that performance is optimal even with growing complexity.
 
 
+
 1. Does the solution work for larger graphs?
    Yes, the method functions well for larger graphs. however, because of the recursive nature of the approach, its efficiency may suffer with very large graphs. Memorization reduces the need for redundant calculations, which makes it more effective than a naive method.
    
@@ -71,15 +72,25 @@ The algorithm considers the graph to be a legitimate DAG. Since this technique i
 Graphs without any outgoing edges from the beginning vertex are examples of common edge situations that this effective approach can manage.
 
 Explanation of Tests:
+
 testEmptyGraph: Tests the case of an empty graph where no vertices or edges exist.
+
 testSingleVertex: Tests a graph with only a single vertex and no edges.
+
 testSingleEdge: Tests a simple graph with one edge between two vertices.
+
 testMultipleEdges: Tests a small graph with a sequence of connected edges.
+
 testDisconnectedGraph: Tests a graph with two disconnected components.
+
 testSelfLoopSkipped: Tests the scenario where a self-loop is attempted but should be skipped.
+
 testLongerPathWithMultipleBranches: Tests a DAG with multiple possible paths from the same starting vertex.
+
 testGraphWithCycleAvoidance: Tests a DAG setup that could resemble a cycle but ensures only valid DAG paths are calculated.
+
 testLargeGraph: Tests a large graph with a simple linear structure.
+
 testMultiplePathsSameLength: Tests a DAG with multiple paths of the same length.
 
 
